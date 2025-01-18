@@ -71,12 +71,21 @@
 						if (slideBg) {
 							slideBg.setAttribute('data-swiper-parallax', 0.75 * swiper.width);
 						}
+						slide.style.pointerEvents = 'none';
 					});
 				},
+				// slideChangeTransitionStart: function () {
+				// 	this.keyboard.disable();
+				// },
+				// slideChangeTransitionEnd: function () {
+				// 	this.keyboard.enable();
+				// },
 				resize: function () {
 					this.update();
 				},
 				slideChange: function () {
+					this.slides[this.activeIndex].style.pointerEvents = 'auto';
+
 					const color = COLORS[this.activeIndex];
 					animate(
 						'.content-swiper',
@@ -195,7 +204,9 @@
 					data-swiper-parallax-y={DATA_SWIPER_PARALLA_Y}
 				>
 					<div class="grid gap-2">
-						<div class="text-[3.16rem] font-black uppercase leading-none" split-text>2024</div>
+						<div class="text-[3.16rem] font-black uppercase leading-none" split-text>
+							My recent life
+						</div>
 						<div class="text-[3.16rem] font-black uppercase leading-none" split-text>
 							in a Nutshell
 						</div>
@@ -326,9 +337,12 @@
 								<div class="text-xl font-medium uppercase" split-text>Result</div>
 								<div class="grid gap-3">
 									<div class="text-xl font-light" split-text>
-										Among 150 participants, our design won 2nd Runner-Up, earning recognition for
-										creating a modern, seamless experience that empowers users to manage their
-										telecom services effortlessly.
+										Among 150 participants, our design won <a
+											href="https://www.facebook.com/photo?fbid=3268976253225592"
+											target="_blank"
+											class="font-bold">2nd Runner-Up</a
+										>, earning recognition for creating a modern, seamless experience that empowers
+										users to manage their telecom services effortlessly.
 									</div>
 								</div>
 							</div>
@@ -453,9 +467,19 @@
 							<div class="grid gap-6">
 								<div class="text-xl font-medium uppercase" split-text>Achievements</div>
 								<div class="grid gap-3">
-									<div class="text-xl font-light" split-text>Honorable Mention on Awwwards.</div>
 									<div class="text-xl font-light" split-text>
-										Site of the Day (SOTD) on CSS Design Awards
+										<a
+											class="font-bold"
+											href="https://www.awwwards.com/sites/hillspeed-group"
+											target="_blank">Honorable Mention</a
+										> on Awwwards.
+									</div>
+									<div class="text-xl font-light" split-text>
+										<a
+											href="https://www.cssdesignawards.com/sites/hillspeed-group/44173/"
+											target="_blank"
+											class="font-bold">Site of the Day (SOTD)</a
+										> on CSS Design Awards
 									</div>
 								</div>
 							</div>
@@ -505,8 +529,11 @@
 								<div class="text-xl font-medium uppercase" split-text>Achievements</div>
 								<div class="grid gap-3">
 									<div class="text-xl font-light" split-text>
-										Earned an Honorable Mention on Awwwards – a milestone that celebrates the team’s
-										hard work and creativity.
+										Earned an <a
+											href="https://www.awwwards.com/sites/the-sand-studio"
+											class="font-bold"
+											target="_blank">Honorable Mention</a
+										> on Awwwards – a milestone that celebrates the team’s hard work and creativity.
 									</div>
 								</div>
 							</div>
@@ -574,11 +601,11 @@
 								<!-- <div class="text-xl font-medium uppercase" split-text>My ROLE</div> -->
 								<div class="grid gap-3">
 									<div class="text-xl font-light" split-text>
-										As a self-taught developer, I’ve built a career without a CS degree—learning
-										fast and excelling in frontend development. But I know that to achieve my dream
-										of a versatile professional who can confidently contribute to every stage of
-										digital product development—handling everything from backend to ML/AI—I need a
-										strong foundation in computer science.
+										As a self-taught developer, I’ve built a career without a CS degree, and
+										excelling in frontend development. But I know that to achieve my dream of a
+										versatile professional who can confidently contribute to every stage of digital
+										product development handling everything from backend to ML/AI—I need a strong
+										foundation in computer science.
 									</div>
 								</div>
 							</div>
@@ -737,7 +764,13 @@
 					</div>
 
 					<div class="flex items-center gap-16">
-						<a data-swiper-parallax-opacity="0" aria-label="LinkedIn" href="/" class="flex size-12">
+						<a
+							data-swiper-parallax-opacity="0"
+							aria-label="LinkedIn"
+							href="https://www.linkedin.com/in/yanaunghein/"
+							target="_blank"
+							class="flex size-12"
+						>
 							<svg
 								width="100%"
 								height="100%"
@@ -782,7 +815,13 @@
 								/>
 							</svg>
 						</a>
-						<a data-swiper-parallax-opacity="0" aria-label="Github" href="/" class="flex size-12">
+						<a
+							data-swiper-parallax-opacity="0"
+							aria-label="Github"
+							href="https://github.com/yaunghein"
+							target="_blank"
+							class="flex size-12"
+						>
 							<svg
 								width="100%"
 								height="100%"
